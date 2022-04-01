@@ -4,5 +4,9 @@
 #include <string>
 
 namespace policy {
-template <typename language> std::string foo() { return language::foo(); }
+
+template <typename language> class foo : private language {
+public:
+  std::string greetings() const { return language::greetings(); }
+};
 } // namespace policy

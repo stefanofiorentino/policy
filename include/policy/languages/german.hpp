@@ -2,8 +2,9 @@
 #include <string>
 namespace policy {
 namespace languages {
-struct german {
-  static std::string foo() { return "Hallo"; }
+class german {
+protected:
+  std::string greetings() const { return "Hallo"; }
 };
 } // namespace languages
 } // namespace policy

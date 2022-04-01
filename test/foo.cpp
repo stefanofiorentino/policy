@@ -5,12 +5,12 @@
 
 #include <policy/lib.hpp>
 
-using ::policy::foo;
+template <typename language> using foo = ::policy::foo<language>  ;
 using ::policy::languages::english;
 using ::policy::languages::german;
 
 int main(int, char **) {
-  assert(strcmp(foo<english>().c_str(), "Hello") == 0);
-  assert(strcmp(foo<german>().c_str(), "Hallo") == 0);
+  assert(strcmp(foo<english>().greetings().c_str(), "Hello") == 0);
+  assert(strcmp(foo<german>().greetings().c_str(), "Hallo") == 0);
   return EXIT_SUCCESS;
 }
