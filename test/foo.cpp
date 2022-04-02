@@ -1,6 +1,5 @@
 #include <cassert>
 #include <cstdlib>
-#include <cstring>
 #include <iostream>
 
 #include <policy/lib.hpp>
