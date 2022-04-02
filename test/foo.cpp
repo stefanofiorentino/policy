@@ -5,9 +5,9 @@
 
 #include <policy/lib.hpp>
 
-template <typename language> using foo = ::policy::foo<language>  ;
-using ::policy::languages::english;
-using ::policy::languages::german;
+template <typename language> using foo = policy::foo<language>;
+using policy::languages::english;
+using policy::languages::german;
 
 int main(int, char **) {
   assert(strcmp(foo<english>().greetings().c_str(), "Hello") == 0);
