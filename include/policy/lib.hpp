@@ -5,7 +5,7 @@
 
 namespace policy {
 
-template <typename language> class foo : private language {
+template <typename language> class speak : private language {
 public:
   std::string greetings() const { return do_greetings(); }
 

@@ -5,14 +5,14 @@
 
 #include <policy/lib.hpp>
 
-template <typename language> using foo = policy::foo<language>;
+template <typename language> using speak = policy::speak<language>;
 using policy::languages::english;
 using policy::languages::german;
 
 int main(int, char **) {
-  assert("Hello" == foo<english>().greetings() && "Should be in English");
-  assert("Hello" != foo<german>().greetings() && "Should be in English");
-  assert("Hallo" == foo<german>().greetings() && "Should be in German");
-  assert("Hallo" != foo<english>().greetings() && "Should be in German");
+  assert("Hello" == speak<english>().greetings() && "Should be in English");
+  assert("Hello" != speak<german>().greetings() && "Should be in English");
+  assert("Hallo" == speak<german>().greetings() && "Should be in German");
+  assert("Hallo" != speak<english>().greetings() && "Should be in German");
   return EXIT_SUCCESS;
 }
