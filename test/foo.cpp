@@ -10,7 +10,9 @@ using policy::languages::english;
 using policy::languages::german;
 
 int main(int, char **) {
-  assert(strcmp(foo<english>().greetings().c_str(), "Hello") == 0);
-  assert(strcmp(foo<german>().greetings().c_str(), "Hallo") == 0);
+  assert("Hello" == foo<english>().greetings() && "Should be in English");
+  assert("Hello" != foo<german>().greetings() && "Should be in English");
+  assert("Hallo" == foo<german>().greetings() && "Should be in German");
+  assert("Hallo" != foo<english>().greetings() && "Should be in German");
   return EXIT_SUCCESS;
 }
