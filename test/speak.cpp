@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 
-#include <speak.hpp>
+#include <speak/speak.hpp>
 
 template <typename language> using speak = policy::speak<language>;
 using policy::languages::english;
