@@ -6,11 +6,13 @@
 
 namespace policy {
 
-template <typename language> class speak : private language {
-public:
+template <typename language>
+class speak : private language {
+ public:
   std::string greetings() const { return do_greetings(); }
 
-private:
+ private:
   using language::do_greetings;
 };
-} // namespace policy
+
+}  // namespace policy

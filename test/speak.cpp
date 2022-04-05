@@ -4,7 +4,8 @@
 
 #include <speak/speak.hpp>
 
-template <typename language> using speak = policy::speak<language>;
+template <typename language>
+using speak = policy::speak<language>;
 using policy::languages::english;
 using policy::languages::german;
 

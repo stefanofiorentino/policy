@@ -6,9 +6,9 @@ namespace policy {
 namespace languages {
 
 class english {
-protected:
+ protected:
   std::string do_greetings() const { return "Hello"; }
 };
 
-} // namespace languages
-} // namespace policy
+}  // namespace languages
+}  // namespace policy
